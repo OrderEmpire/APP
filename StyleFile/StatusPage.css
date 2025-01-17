@@ -1,0 +1,159 @@
+.StatusPage {
+    max-width: 2000px;
+    width: 1250px;
+    margin: 20px 20%;
+    margin-top: 120px;
+}
+
+#StatusPageTitle {
+    max-width: 600px;
+}
+
+#StatusPageTitle h1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.StatusInfo {
+    display: flex;
+    max-width: fit-content;
+    font-size: 2rem;
+    gap: 45px;
+    margin: 50px auto;
+}
+
+.Level {
+    gap: 2px;
+}
+
+.Level, .JobAndTitle, .Stats, .Stats-two, .stats-num, .stats-num-two, .add-block, .add-block-two {
+    display: flex;
+    flex-direction: column;
+}
+
+.LevelNum {
+    font-size: 4.5rem;
+    text-shadow: 0 0 10px #84E4E1;
+    margin-left: 25px;
+}
+
+.JobAndTitle {
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.Row-1, .Row-2 {
+    display: inline-flex;
+    margin-bottom: 10px;
+    gap: 40px;
+}
+
+.UserGoalState {
+    border: 2px solid white;
+    height: 100px;
+    box-shadow: 0 0 10px white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 500px;
+    margin: 0 auto 30px auto;
+    padding: 30px;
+}
+
+.row-one svg {
+    transform: translate(0px, -73px);
+}
+
+.XP-bar {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    text-align: right;
+    margin-left: 100px;
+}
+
+.bar-exp-outer {
+    border: 1px solid white;
+    box-shadow: 0 0 10px #84E4E1;
+    height: 30px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bar-exp-inner { /* Mutable */
+    background-color: white;
+    width: 5%;
+    top: 3px;
+    left: 3px;
+    border-radius: 25px;
+    height: 78%;
+    position: absolute;
+}
+
+.XP-bar p {
+    font-size: 1.1rem;
+    white-space: nowrap;
+    margin-top: 5px;
+}
+
+.row-two {
+    font-size: 1.5rem;
+    position: relative;
+    top: -15px;
+    right: 200px;
+    width: 350px;
+}
+
+.Fatigue-num {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #84E4E1;
+    margin-left: 80px;
+}
+
+.StatsView {
+    border: 2px solid white;
+    max-height: 350px;
+    box-shadow: 0 0 10px white;
+    padding: 25px 10%;
+    display: flex;
+    gap: 200px;
+}
+
+.First-column, .Second-column {
+    display: flex;
+    flex-direction: row;
+    font-size: 3.5rem;
+}
+
+.Stats, .Stats-two {
+    text-align: right;
+    gap: 50px;
+}
+
+.stats-num, .stats-num-two {
+    text-align: center;
+    font-weight: bold;
+    gap: 50px;
+    margin-left: 40px;
+}   
+
+.add-block, .add-block-two {
+    gap: 55px;
+    margin-left: 55px;
+    cursor: pointer;
+}
+
+
+.add-block svg, .add-block-two svg {
+    transform: translate(-1px, 0px);
+    transition: box-shadow 0.3s, padding-bottom 0.15s;
+}
+
+.add-block svg:hover, .add-block-two svg:hover {
+    box-shadow: 0 0 10px 5px white;
+}
+
+.add-block svg:active, .add-block-two svg:active {
+    padding-bottom: 5px;
+}

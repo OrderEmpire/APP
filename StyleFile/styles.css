@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Sansation", sans-serif;
+    background-color: black;
+    color: white;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+/* NavBar */
+
+header {
+    position: fixed;
+    background-color: white;
+    height: 98%;
+    max-width: 50px;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    align-items: center;
+    padding: 20px 4%;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 45px;
+    justify-content: space-between;
+}
+
+.Logo {
+    font-family: "Dancing Script", sans-serif;
+    color: black;
+    font-size: 5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px black;
+}
+
+.navbar img {
+    margin-top: 150px;
+    transition: border 0.3s, box-shadow 0.3s, padding-bottom 0.3s;
+}
+
+.navbar img:hover {
+    border: 1px solid black;
+    box-shadow: 0 0 10px 5px black;
+    border-radius: 15px;
+}
+
+.navbar img:active {
+    padding-bottom: 10px;
+}

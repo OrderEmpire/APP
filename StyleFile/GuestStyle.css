@@ -1,0 +1,158 @@
+.QuestPage, .PenaltyPage, .StatusPage {
+    margin: 20px 30%;
+    border: 3px solid white;
+    box-shadow: 0px 0px 10px white;
+    max-width: 1000px;
+    height: 870px;
+    max-height: 1200px;
+    padding: 15px 5%;
+}
+
+.Title, .DailyQuest, .Quest h2, .Caution {
+    max-width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: fit-content;
+    margin: 20px auto;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 15px;
+    box-shadow: 0 4px 10px white inset, 0 -4px 10px white inset;
+}
+
+
+.Title img {
+    margin: 0 30px;
+}
+
+.Title h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px white;
+    letter-spacing: 5px;
+    padding: 5px 20px;
+}
+
+.DailyQuest {
+    margin: 35px auto;
+    text-align: center;
+    max-width: 350px;
+    font-size: 1.33rem;
+}
+
+.Quest {
+    align-items: flex-start;
+}
+
+.Quest h2 {
+    color: rgb(0, 255, 0);
+    font-size: 2rem;
+    border-bottom: 3px solid rgb(4, 255, 4);
+}
+
+.Quest-page {
+    display: inline-flex;
+    margin: 20px 0 50px auto;
+}
+
+.Quest, .checkbox-column, .Quest-column, .Reps-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* CheckBox styling */ 
+.checkbox-column {
+    gap: 45px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.container {
+    display: block;
+    position: relative;
+    margin-bottom: 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+
+.container:hover input ~ .checkmark {
+    box-shadow: 0 0 10px 5px white;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: black;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 11px;
+    top: 7px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+
+
+/* Task Name, Reps, Warning, and the clock emoji styling */
+.Quest-column, .Reps-column {
+    gap: 55px;
+    margin-top: 8px;
+    font-size: 1.6rem;
+    width: 230px;
+}
+
+.Task-column {
+    display: flex;
+    max-width: 600px;
+    gap: 20px;
+}
+
+.Reps-column {
+    text-align: right;
+}
+
+@media only screen and (max-width: 400px) {
+    .Reps-column {
+        width: 500px;
+    }
+}

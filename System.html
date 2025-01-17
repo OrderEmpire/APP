@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Leveling</title>
+
+    <link rel="stylesheet" href="StyleFile/styles.css">
+    <link rel="stylesheet" href="StyleFile/GuestStyle.css">
+    <link rel="stylesheet" href="StyleFile/PenaltyStyle.css">
+    <link rel="stylesheet" href="StyleFile/StatusPage.css">
+
+    <link href="https://fonts.cdnfonts.com/css/sansation" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+    <script src="Features/animation.js" defer></script>
+    <script src="Features/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="Logo">S</div>
+        <nav class="navbar" id="navbar">
+            <a href="#Quest"><img src="icons/notification-status.svg" width="90" height="95" id="QuestBtn"></a>
+            <a href="#StatusP" id="StatusBtn"><img src="icons/eye.svg" width="90" height="95"></a>
+            <a href="#Setting" id="SettingBtn"><img src="icons/category.svg" width="90" height="95"></a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page I  -->
+        <section class="QuestPage" id="Quest">
+            <div class="Title">
+                <img src="icons/QuestIcon.svg" width="40" height="40">
+                <h1>QUEST INFO</h1>
+            </div>
+            <p class="DailyQuest"><span style="color: rgb(0, 255, 0)">DAILY QUEST</span> - TRAIN TO BE A <strong>FORMIDABLE HUNTER</strong></p>
+           
+            <div class="Quest">
+                <h2>GOALS</h2>
+                <div class="Quest-page">
+                   <div class="checkbox-column">
+                       <label class="container"><input type="checkbox" id="CheckBox1" onclick="QuestComplete(this, 2)"><span class="checkmark"></span></label>
+                       <label class="container"><input type="checkbox" id="CheckBox2" onclick="QuestComplete(this, 2)"><span class="checkmark"></span></label>
+                       <label class="container"><input type="checkbox" id="CheckBox3" onclick="QuestComplete(this, 2)"><span class="checkmark"></span></label>
+                       <label class="container"><input type="checkbox" id="CheckBox4" onclick="QuestComplete(this, 2)"><span class="checkmark"></span></label>                                                                                                                      
+                   </div>
+                   
+                   <div class="Task-column" id="TaskColumn">
+                    <div class="Quest-column" id="MainTask">
+                        <p>PUSH-UP</p>
+                        <p>SIT-UP</p>
+                        <p>SQUAT</p>
+                        <p>RUN</p>
+                    </div>
+
+                    <div class="Reps-column" id="RepsTask">
+                        <p>[0/100]</p>
+                        <p>[0/100]</p>
+                        <p>[0/100]</p>
+                        <p>[0/10KM]</p>
+                    </div>
+                   </div>
+                </div>
+            </div>
+
+            <h4 class="Caution"><span style="color: red;">CAUTION!</span> - IF THE DAILY QUEST REMAINS INCOMPLETE, PENALTIES WILL BE GIVEN ACCORDINGLY.</h4>
+        </section>
+
+        <!--  PENALTY PAGE -->
+        <section class="PenaltyPage" id="Quest">
+            <div class="Title" id="PenaltyPageTitle">
+                <img src="icons/View.svg">
+                <h1 class="PenaltyTitle">PENALTY ZONE</h1>
+            </div>
+        
+            <div clas="Penalty">
+                <div class="Torture"><iframe class="KSIVideo" width="510" height="315" src="https://www.youtube.com/embed/vm2aSpZMNHE?si=ddcdVraAJSVEXpyY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <div class="Penalty-bar">
+                    <label class="container"><input type="checkbox" id="CheckBox5" onclick="QuestComplete(this, 2)"><span class="checkmark"></span></label>  
+                    <p>"THICK OF IT"</p>
+                    <p class="duration" id="durationTorture">[0/1 hour]</p>
+                </div>
+            </div>
+
+            <h4 class="Caution">WELCOME. LISTEN TO <span style="color: red">“THICK OF IT”</span> - KAI CENAT FOR <span style="color: red">1 HOUR.</span> WILL BE DOUBLE FOR THE NEXT FAIL.</h4>
+        </section>
+
+       <!-- STATUS PAGE -->
+        <section class="StatusPage" id="StatusP">
+            <div class="Title" id="StatusPageTitle">
+                <h1 class="StatusPageH1">STATUS</h1>
+            </div>
+
+            <div class="StatusInfo">
+                <div class="Level"><p class="LevelNum" id="LevelNew" style="font-weight: bold;">0</p><p class="LevelText">LEVEL</p></div>
+                <div class="JobAndTitle">
+                    <div class="Row-1"><h4>NAME: </h4><h4 style="text-shadow: 0 0 10px #84E4E1" id="UserName">Unknown</h4></div>
+                    <div class="Row-2"><h4>TITLE: </h4><h4 style="text-shadow: 0 0 10px #84E4E1;" id="titleId">E-Rank Hunter</h4></div>
+                </div>
+            </div>
+
+            <div class="UserGoalState">
+                <div class="row-one">
+                    <div class="XP-bar">
+                        <div class="bar-exp-outer"><div class="bar-exp-inner" id="innerExpBar" onclick="LevelSystem()"></div></div>
+                        <p style="font-weight: 600" id="ExpInfo">0 / 10 EXP</p>
+                    </div>
+                    <svg width="65" height="66" viewBox="0 0 65 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M32.5 60.5C47.4577 60.5 59.5833 48.1878 59.5833 33C59.5833 17.8122 47.4577 5.5 32.5 5.5C17.5423 5.5 5.41666 17.8122 5.41666 33C5.41666 48.1878 17.5423 60.5 32.5 60.5ZM22.0683 37.95H32C32.2357 37.95 32.3535 37.95 32.4268 38.0232C32.5 38.0964 32.5 38.2143 32.5 38.45V55.4482C32.5 56.3498 32.5 56.8006 32.6969 56.8434C32.8939 56.8862 33.0809 56.476 33.4549 55.6556L44.7514 30.8797C45.3325 29.6054 45.623 28.9682 45.3278 28.5091C45.0325 28.05 44.3322 28.05 42.9317 28.05H33C32.7643 28.05 32.6464 28.05 32.5732 27.9768C32.5 27.9036 32.5 27.7857 32.5 27.55V10.5518C32.5 9.65021 32.5 9.19939 32.3031 9.15662C32.1061 9.11384 31.9191 9.52403 31.545 10.3444L20.2485 35.1203C19.6675 36.3946 19.377 37.0318 19.6722 37.4909C19.9675 37.95 20.6677 37.95 22.0683 37.95H22.0683Z" fill="white"/>
+                    </svg>
+                </div>
+
+                <div class="row-two">
+                    <h4>AVAILABLE PTS</h4>
+                    <p class="Fatigue-num" id="AvailablePoints">0</p>                        
+                </div>
+            </div>
+
+            <div class="StatsView">
+                <div class="First-column">
+                    <div class="Stats">
+                        <h4>STR: </h4>
+                        <h4>INT: </h4>
+                        <h4>AGI: </h4>
+                    </div>
+
+                    <div class="stats-num" style="text-shadow: 0 0 10px #84E4E1;" id="StatNum">
+                        <p>0</p>
+                        <p>0</p>
+                        <p>0</p>
+                    </div>
+
+                    <div class="add-block" id="AddPointButton">
+                        <svg onclick="addSkillPoint(0)" width="54" height="57" viewBox="0 0 54 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.75 7.125C8.54086 7.125 6.75 8.91586 6.75 11.125V45.875C6.75 48.0841 8.54086 49.875 10.75 49.875H43.25C45.4591 49.875 47.25 48.0841 47.25 45.875V11.125C47.25 8.91586 45.4591 7.125 43.25 7.125H10.75ZM26 16.625V27.5L15.75 27.5V29.5L26 29.5V40.375H28V29.5H38.25V27.5H28V16.625H26Z" fill="white"/>
+                        </svg>
+                        <svg width="54" height="57" viewBox="0 0 54 57" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="addSkillPoint(1)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.75 7.125C8.54086 7.125 6.75 8.91586 6.75 11.125V45.875C6.75 48.0841 8.54086 49.875 10.75 49.875H43.25C45.4591 49.875 47.25 48.0841 47.25 45.875V11.125C47.25 8.91586 45.4591 7.125 43.25 7.125H10.75ZM26 16.625V27.5L15.75 27.5V29.5L26 29.5V40.375H28V29.5H38.25V27.5H28V16.625H26Z" fill="white"/>
+                        </svg>
+                        <svg width="54" height="57" viewBox="0 0 54 57" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="addSkillPoint(2)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.75 7.125C8.54086 7.125 6.75 8.91586 6.75 11.125V45.875C6.75 48.0841 8.54086 49.875 10.75 49.875H43.25C45.4591 49.875 47.25 48.0841 47.25 45.875V11.125C47.25 8.91586 45.4591 7.125 43.25 7.125H10.75ZM26 16.625V27.5L15.75 27.5V29.5L26 29.5V40.375H28V29.5H38.25V27.5H28V16.625H26Z" fill="white"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="Second-column">
+                    <div class="Stats-two">
+                        <h4>VIT: </h4>
+                        <h4>PER: </h4>
+                        <h4>MAN: </h4>
+                    </div>
+
+                    <div class="stats-num-two" style="text-shadow: 0 0 10px #84E4E1;" id="StatNum">
+                        <p>0</p>
+                        <p>0</p>
+                        <p>0</p>
+                    </div>
+
+                    <div class="add-block-two" id="AddPointButton">
+                        <svg width="54" height="57" viewBox="0 0 54 57" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="addSkillPoint(3)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.75 7.125C8.54086 7.125 6.75 8.91586 6.75 11.125V45.875C6.75 48.0841 8.54086 49.875 10.75 49.875H43.25C45.4591 49.875 47.25 48.0841 47.25 45.875V11.125C47.25 8.91586 45.4591 7.125 43.25 7.125H10.75ZM26 16.625V27.5L15.75 27.5V29.5L26 29.5V40.375H28V29.5H38.25V27.5H28V16.625H26Z" fill="white"/>
+                        </svg>
+                        <svg width="54" height="57" viewBox="0 0 54 57" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="addSkillPoint(4)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.75 7.125C8.54086 7.125 6.75 8.91586 6.75 11.125V45.875C6.75 48.0841 8.54086 49.875 10.75 49.875H43.25C45.4591 49.875 47.25 48.0841 47.25 45.875V11.125C47.25 8.91586 45.4591 7.125 43.25 7.125H10.75ZM26 16.625V27.5L15.75 27.5V29.5L26 29.5V40.375H28V29.5H38.25V27.5H28V16.625H26Z" fill="white"/>
+                        </svg>
+                        <svg width="54" height="57" viewBox="0 0 54 57" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="addSkillPoint(5)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.75 7.125C8.54086 7.125 6.75 8.91586 6.75 11.125V45.875C6.75 48.0841 8.54086 49.875 10.75 49.875H43.25C45.4591 49.875 47.25 48.0841 47.25 45.875V11.125C47.25 8.91586 45.4591 7.125 43.25 7.125H10.75ZM26 16.625V27.5L15.75 27.5V29.5L26 29.5V40.375H28V29.5H38.25V27.5H28V16.625H26Z" fill="white"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
